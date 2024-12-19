@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Geist+Mono:wght@300&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=WindSong:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HOME -->
+    <header class="bg-[#F2F4F9]">
+      <nav class="flex justify-between items-center px-4 md:px-10 py-6">
+        <!-- LOGO -->
+        <div class="flex items-center">
+          <img class="w-10 h-10 mr-2" src="../assets/logo.png" alt="logo" />
+          <h2 class="font-Atkinson text-2xl md:text-4xl font-bold">
+            DRIVEWAYS
+          </h2>
+        </div>
+
+        <!-- Tablet MENU -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-500 hover:text-orange-400">
+            <img src="../assets/head/Menu.png" class="w-8 h-6" />
+          </button>
+        </div>
+
+        <!-- NAV LINKS -->
+        <ul
+          id="nav-links"
+          class="hidden md:flex items-center gap-20 text-gray-400"
+        >
+          <li class="relative group">
+            <a class="hover:text-orange-400 transition" href="#">HOME</a>
+            <i
+              class="fa fa-angle-down text-gray-400 group-hover:text-orange-400"
+              aria-hidden="true"
+            ></i>
+            <ul
+              class="hidden group-hover:block dropdown-menu absolute left-0 w-[200px] z-50 py-4 px-6 bg-white rounded-md shadow-lg"
+            >
+              <li class="mb-6 relative hover:bg-orange">
+                <a
+                  class="text-gray-400 hover:text-orange-400 focus:outline-none hover:after:content-[''] hover:after:absolute hover:after:top-7 hover:after:left-0 hover:after:w-1/3 hover:after:h-0.5 hover:after:bg-orange-400 hover:text-orange-400"
+                  href="#"
+                >
+                  HOME PAGE 1
+                </a>
+              </li>
+              <li class="mb-6 relative hover:bg-orange">
+                <a
+                  class="text-gray-400 hover:text-orange-400 focus:outline-none hover:after:content-[''] hover:after:absolute hover:after:top-7 hover:after:left-0 hover:after:w-1/3 hover:after:h-0.5 hover:after:bg-orange-400 hover:text-orange-400"
+                  href="#"
+                >
+                  HOME PAGE 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="hover:text-orange-400 transition" href="#">ABOUT US</a>
+          </li>
+          <li>
+            <a class="hover:text-orange-400 transition" href="#">VEHICLES</a>
+          </li>
+          <li>
+            <a class="hover:text-orange-400 transition" href="#">FEATURES</a>
+            <i
+              class="fa fa-angle-down text-gray-400 group-hover:text-orange-400"
+              aria-hidden="true"
+            ></i>
+          </li>
+          <li>
+            <a class="text-xl hover:text-orange-400 ml-16" href="#"
+              >CONTACT US</a
+            >
+          </li>
+        </ul>
+
+        <!-- MOBILE MENU -->
+        <ul
+          id="mobile-nav"
+          class="hidden absolute top-[80px] bg-[#F2F4F9] pl-14 left-0 w-full flex-col items-center gap-6 text-gray-500 md:hidden"
+        >
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">VEHICLES</a></li>
+          <li><a href="#">FEATURES</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div
+        class="header-content flex mt-8 pb-20 max-md:flex-col max-md:items-center"
+      >
+        <div class="ct-left ml-20 w-[45%] mt-10 max-md:w-[80%]">
+          <p class="text-red-500 text-[22px] font-normal max-md:text-center">
+            PLAN YOUR TRIP NOW
+          </p>
+          <h1
+            class="font-bold text-8xl mb-10 mt-6 max-md:text-7xl max-md:text-center"
+          >
+            EXPLORE THE WORLD WITH US
+          </h1>
+          <div class="flex justify-around items-center w-[90%]">
+            <img
+              class="w-[213px] h-[67px] hover:cursor-pointer"
+              src="../assets/button.png"
+              alt="button"
+            />
+            <!-- <a
+            href="#"
+            class="bg-orange-400 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-orange-500"
+            style="clip-path: polygon(0, 10% 0, 10%, 0% 100%)"
+          >
+            Book A Ride
+          </a> -->
+            <p class="text-[24px] text-[#5B6B7A]">OR</p>
+            <!-- <img
+            class="w-[62px] h-[62px]"
+            src="../assets/playBtn.png"
+            alt="button"
+          /> -->
+            <button
+              class="border border-orange-400 bg-orange-100 text-orange-400 px-6 rounded-full text-2xl"
+            >
+              ▶
+            </button>
+          </div>
+          <div class="w-3/4 mt-16 max-md:w-full">
+            <p class="text-[#FA1D1D] font-bold max-md:text-2xl">
+              WHAT'S NEW
+              <span class="ml-3">------------------------------</span>
+            </p>
+            <p class="mt-4 mb-10 text-[#5B6B7A] max-md:text-xl">
+              Now You Can Rent A Car With The Various Facilities And
+              Conveniences We Provide.
+            </p>
+          </div>
+        </div>
+        <div class="relative w-[55%] ml-16 max-md:w-full max-md:ml-0">
+          <img
+            class="w-full object-cover object-left h-full"
+            src="../assets/main-bg-image.jpg"
+            alt="main-bg-image"
+          />
+          <img
+            class="w-[30%] absolute right-0 bottom-0"
+            src="../assets/main-bg-image-child.png"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- STATISTIC -->
+    <div class="bg-[#020920] text-white p-8">
+      <div class="flex flex-wrap justify-around items-center gap-8">
+        <!-- Car Rented -->
+        <div class="hover:text-[#FF9D29] text-center flex-1 min-w-[200px]">
+          <p class="uppercase font-thin text-sm md:text-base">car rented</p>
+          <h2 class="font-bold text-4xl md:text-6xl mt-2">240</h2>
+        </div>
+
+        <!-- Satisfied Clients -->
+        <div class="hover:text-[#FF9D29] text-center flex-1 min-w-[200px]">
+          <p class="uppercase font-thin text-sm md:text-base">
+            satisfied clients
+          </p>
+          <h2 class="font-bold text-4xl md:text-6xl mt-2">235</h2>
+        </div>
+
+        <!-- Years Experience -->
+        <div class="hover:text-[#FF9D29] text-center flex-1 min-w-[200px]">
+          <p class="uppercase font-thin text-sm md:text-base">
+            years experience
+          </p>
+          <h2 class="font-bold text-4xl md:text-6xl mt-2">12+</h2>
+        </div>
+
+        <!-- Car Types -->
+        <div class="hover:text-[#FF9D29] text-center flex-1 min-w-[200px]">
+          <p class="uppercase font-thin text-sm md:text-base">car types</p>
+          <h2 class="font-bold text-4xl md:text-6xl mt-2">18</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT US -->
+
+    <div class="about-us my-16 px-6 md:px-16 flex flex-col md:flex-row gap-8">
+      <!-- Left Content -->
+      <div class="flex flex-col w-full md:w-1/2">
+        <!-- Section Title -->
+        <p
+          class="uppercase mb-4 text-[#FA1D1D] text-lg md:text-[28px] font-light"
+        >
+          about us
+        </p>
+        <h2
+          class="uppercase mb-6 text-[#011222] text-6xl max-md:text-6xl font-bold"
+        >
+          Providing reliable car rentals
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+          <br /><br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <!-- Features -->
+        <div
+          class="flex flex-col md:flex-row gap-4 mb-6 max-md:flex-row justify-between"
+        >
+          <div class="flex items-center gap-3">
+            <img src="../assets/about/Rectangle 59.png" alt="Safe & Trusted" />
+            <h3 class="text-[#FF9D29] uppercase font-bold text-lg">
+              Safe & Trusted
+            </h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="../assets/about/Rectangle .png" alt="Affordable Price" />
+            <h3 class="text-[#011222] uppercase font-bold text-lg">
+              Affordable Price
+            </h3>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-t border-gray-300 mt-4" />
+
+        <!-- Founder Info -->
+        <div class="flex justify-between mt-8">
+          <div class="flex items-center gap-4">
+            <img
+              src="../assets/about/avt.png"
+              class="w-16 h-16 rounded-full object-cover"
+              alt="Founder Avatar"
+            />
+            <div>
+              <h3 class="uppercase text-[#011222] font-semibold text-lg">
+                Jame Austin
+              </h3>
+              <p class="text-[#FA1D1D] font-light text-sm">Founder & CEO</p>
+            </div>
+          </div>
+          <div class="sign">
+            <p
+              class="text-[28px] md:text-[38px] text-[#FA1D1D]"
+              style="font-family: WindSong, serif"
+            >
+              Jame Austin
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content (Image Section) -->
+      <div class="relative w-full md:w-1/2 flex justify-center items-center">
+        <img
+          src="../assets/about/driver.png"
+          class="w-full object-cover"
+          alt="Driver"
+        />
+        <img
+          src="../assets/about/XLarge.png"
+          class="absolute -left-6 -top-10 md:top-36 max-md:left-64 w-24 md:w-auto"
+          alt="Overlay"
+        />
+      </div>
+    </div>
+
+    <!-- CAR LIST -->
+    <div class="bg-[#F2F4F9] pt-[50px] pb-14">
+      <div class="flex mx-20 my-20 flex-col">
+        <!-- title -->
+        <div class="title flex justify-between w-full">
+          <div class="left w-[65%]">
+            <p class="uppercase text-[#FA1D1D] font-light text-[24px]">
+              cars list
+            </p>
+            <h1
+              class="uppercase text-[#011222] text-[58px] font-bold max-md:text-[42px]"
+            >
+              choose the car that you need
+            </h1>
+          </div>
+          <div class="right w-[35%] flex justify-end items-end">
+            <img
+              class="hover:cursor-pointer hover:scale-105"
+              src="../assets/carlist/Large.png"
+            />
+          </div>
+        </div>
+        <!-- car-box list -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-14 mt-14">
+          <!-- card1 -->
+          <div
+            class="carbox bg-[#ffffff] relative bg-white shadow-lg p-6 flex items-center"
+            style="
+              clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+            "
+          >
+            <div class="w-2/5">
+              <img class="" src="../assets/carlist/car1.png" />
+            </div>
+
+            <div class="w-3/5 pl-4">
+              <div
+                class="absolute top-0 right-0 bg-blue-900 text-white px-2 py-2 text-sm hover:bg-[#FA1D1D]"
+              >
+                20% Off
+              </div>
+              <span
+                class="text-3xl font-bold text-gray-800 hover:text-[#FF9D29]"
+              >
+                $69
+                <span class="text-sm font-normal text-gray-500">/ Day</span>
+              </span>
+              <p class="font-semibold text-gray-600 my-2">RETRO ZAPOROZHETS</p>
+              <hr />
+              <ul class="text-gray-500 mt-3 space-y-1">
+                <li>
+                  <i class="fa-solid fa-gas-pump"></i> Diesel &nbsp;&nbsp;
+                  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  <i class="fas fa-tachometer-alt"></i> 5.000 Miles
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>
+                  Family &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  <i class="fas fa-car-side"></i> Manual
+                </li>
+              </ul>
+              <div class="flex justify-between items-center text-center mx-4">
+                <p class="mt-4 text-gray-400 hover:text-[#FF9D29]">AVAILABLE</p>
+                <a
+                  href="#"
+                  class="text-gray-400 mt-2 inline-block font-semibold hover:text-[#FF9D29]"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- card2 -->
+
+          <div
+            class="carbox bg-[#ffffff] relative bg-white shadow-lg p-6 flex items-center"
+            style="
+              clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+            "
+          >
+            <div class="w-2/5">
+              <img class="" src="../assets/carlist/car2.png" />
+            </div>
+
+            <div class="w-3/5 pl-4">
+              <div
+                class="absolute top-0 right-0 bg-blue-900 text-white px-2 py-2 text-sm hover:bg-[#FA1D1D]"
+              >
+                15% Off
+              </div>
+              <span
+                class="text-3xl font-bold text-gray-800 hover:text-[#FF9D29]"
+              >
+                $79
+                <span class="text-sm font-normal text-gray-500">/ Day</span>
+              </span>
+              <p class="font-semibold text-gray-600 my-2">BLACK NISSAN GT-R</p>
+              <hr />
+              <ul class="text-gray-500 mt-3 space-y-1">
+                <li>
+                  <i class="fa-solid fa-gas-pump"></i> Diesel &nbsp;&nbsp;
+                  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  <i class="fas fa-tachometer-alt"></i> 5.000 Miles
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>
+
+                  Family &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  <i class="fas fa-car-side"></i> Manual
+                </li>
+              </ul>
+              <div class="flex justify-between items-center text-center mx-4">
+                <p class="mt-4 text-gray-400 hover:text-[#FF9D29]">AVAILABLE</p>
+                <a
+                  href="#"
+                  class="text-gray-400 mt-2 inline-block font-semibold hover:text-[#FF9D29]"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- card3 -->
+
+          <div
+            class="carbox bg-[#ffffff] relative bg-white shadow-lg p-6 flex items-center"
+            style="
+              clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+            "
+          >
+            <div class="w-2/5">
+              <img class="" src="../assets/carlist/car3.png" />
+            </div>
+
+            <div class="w-3/5 pl-4">
+              <div
+                class="absolute top-0 right-0 bg-blue-900 text-white px-2 py-2 text-sm hover:bg-[#FA1D1D]"
+              >
+                10% Off
+              </div>
+              <span
+                class="text-3xl font-bold text-gray-800 hover:text-[#FF9D29]"
+              >
+                $59
+                <span class="text-sm font-normal text-gray-500">/ Day</span>
+              </span>
+              <p class="font-semibold text-gray-600 my-2">VOLKSWAGEN PASSAT</p>
+              <hr />
+              <ul class="text-gray-500 mt-3 space-y-1">
+                <li>
+                  <i class="fa-solid fa-gas-pump"></i> Diesel &nbsp;&nbsp;
+                  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  <i class="fas fa-tachometer-alt"></i> 5.000 Miles
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>
+
+                  Family &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  <i class="fas fa-car-side"></i> Manual
+                </li>
+              </ul>
+              <div class="flex justify-between items-center text-center mx-4">
+                <p class="mt-4 text-gray-400 hover:text-[#FF9D29]">AVAILABLE</p>
+                <a
+                  href="#"
+                  class="text-gray-400 mt-2 inline-block font-semibold hover:text-[#FF9D29]"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- card4 -->
+
+          <div
+            class="carbox bg-[#ffffff] relative bg-white shadow-lg p-6 flex items-center"
+            style="
+              clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+            "
+          >
+            <div class="w-2/5">
+              <img class="" src="../assets/carlist/car4.png" />
+            </div>
+
+            <div class="w-3/5 pl-4">
+              <div
+                class="absolute top-0 right-0 bg-blue-900 text-white px-2 py-2 text-sm hover:bg-[#FA1D1D]"
+              >
+                20% Off
+              </div>
+              <span
+                class="text-3xl font-bold text-gray-800 hover:text-[#FF9D29]"
+              >
+                $60
+                <span class="text-sm font-normal text-gray-500">/ Day</span>
+              </span>
+              <p class="font-semibold text-gray-600 my-2">
+                BRILLIANCE JUNJIE FRV
+              </p>
+              <hr />
+              <ul class="text-gray-500 mt-3 space-y-1">
+                <li>
+                  <i class="fa-solid fa-gas-pump"></i>
+                  Diesel &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  <i class="fas fa-tachometer-alt"></i> 5.000 Miles
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>
+
+                  Family &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  <i class="fas fa-car-side"></i> Manual
+                </li>
+              </ul>
+              <div class="flex justify-between items-center text-center mx-4">
+                <p class="mt-4 text-gray-400 hover:text-[#FF9D29]">AVAILABLE</p>
+                <a
+                  href="#"
+                  class="text-gray-400 mt-2 inline-block font-semibold hover:text-[#FF9D29]"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY CHOOSE US -->
+    <div
+      class="w-full flex flex-col justify-center items-center text-center mt-36"
+    >
+      <!-- Container -->
+      <div class="w-[80%]">
+        <!-- TITLE -->
+        <div class="flex flex-col justify-center items-center text-center mb-8">
+          <p class="uppercase text-[#FA1D1D] font-light text-[24px]">
+            why choose us
+          </p>
+          <h1
+            class="uppercase text-[#011222] text-[58px] font-bold max-md:text-[42px]"
+          >
+            providing reliable <br />car rentals
+          </h1>
+          <div class="hidden max-md:block -bottom-0">
+            <img
+              class="h-full mt-10 object-cover"
+              src="../assets/whychooseus/bgthumb.png"
+              alt="Why Choose Us"
+            />
+          </div>
+        </div>
+
+        <!-- PROVIDING -->
+        <div class="flex flex-col md:flex-row gap-8 mb-44">
+          <!-- col-left -->
+          <div class="flex flex-col gap-16 flex-1">
+            <div class="group flex gap-6">
+              <img
+                class="w-[50px] h-[50px]"
+                src="../assets/whychooseus/1.png"
+              />
+              <div class="flex flex-col text-left gap-3">
+                <h3
+                  class="font-bold group-hover:text-[#FF9D29] transition duration-300"
+                >
+                  CROSS COUNTRY DRIVE
+                </h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Praesentium maxime, dolor corporis et deserunt veritatis
+                  tempore accusantium officiis corrupti sed.
+                </p>
+              </div>
+            </div>
+
+            <div class="group flex gap-6">
+              <img
+                class="w-[50px] h-[50px]"
+                src="../assets/whychooseus/2.png"
+              />
+              <div class="flex flex-col text-left gap-3">
+                <h3
+                  class="font-bold group-hover:text-[#FF9D29] transition duration-300"
+                >
+                  NO HIDDEN CHARGES
+                </h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Praesentium maxime, dolor corporis et deserunt veritatis
+                  tempore accusantium officiis corrupti sed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- image-thumbnail -->
+          <div class="hidden md:block flex-1">
+            <img
+              class="h-full mt-10 object-cover"
+              src="../assets/whychooseus/bgthumb.png"
+              alt="Why Choose Us"
+            />
+          </div>
+
+          <!-- col-right -->
+          <div class="flex flex-col gap-16 flex-1">
+            <div class="group flex gap-6 flex-row-reverse max-md:flex-row">
+              <img
+                class="w-[50px] h-[50px]"
+                src="../assets/whychooseus/3.png"
+              />
+              <div class="flex flex-col text-right gap-3 max-md:text-left">
+                <h3
+                  class="font-bold group-hover:text-[#FF9D29] transition duration-300"
+                >
+                  REVERSE ANYTIME
+                </h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Praesentium maxime, dolor corporis et deserunt veritatis
+                  tempore accusantium officiis corrupti sed.
+                </p>
+              </div>
+            </div>
+
+            <div class="group flex gap-6 flex-row-reverse max-md:flex-row">
+              <img
+                class="w-[50px] h-[50px]"
+                src="../assets/whychooseus/4.png"
+              />
+              <div class="flex flex-col text-right gap-3 max-md:text-left">
+                <h3
+                  class="font-bold group-hover:text-[#FF9D29] transition duration-300"
+                >
+                  24/7 SUPPORT
+                </h3>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Praesentium maxime, dolor corporis et deserunt veritatis
+                  tempore accusantium officiis corrupti sed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- banner -->
+    <section
+      class="flex flex-wrap justify-between items-center px-4 py-10 mt-10 mb-40 bg-[#020920] text-[#BDBDBD] gap-6"
+    >
+      <!-- Item -->
+      <div class="flex items-center gap-4 flex-shrink-0">
+        <img
+          src="../assets/banner/1.png"
+          alt="Icon 1"
+          class="w-[62px] h-[58px] rounded-sm"
+        />
+        <div class="flex flex-col">
+          <h3 class="text-[20px] font-bold">TECHBRAND</h3>
+          <p class="text-[10px]">YOUR TAGLINE GOES HERE</p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-center gap-4 flex-shrink-0">
+        <img
+          src="../assets/banner/2.png"
+          alt="Icon 2"
+          class="w-[62px] h-[58px] rounded-sm"
+        />
+        <div class="flex flex-col">
+          <h3 class="text-[20px] font-bold">TECHBRAND</h3>
+          <p class="text-[10px]">YOUR TAGLINE GOES HERE</p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-center gap-4 flex-shrink-0">
+        <img
+          src="../assets/banner/3.png"
+          alt="Icon 3"
+          class="w-[62px] h-[58px] rounded-sm"
+        />
+        <div class="flex flex-col">
+          <h3 class="text-[20px] font-bold">TECHBRAND</h3>
+          <p class="text-[10px]">YOUR TAGLINE GOES HERE</p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-center gap-4 flex-shrink-0">
+        <img
+          src="../assets/banner/4.png"
+          alt="Icon 4"
+          class="w-[62px] h-[58px] rounded-sm"
+        />
+        <div class="flex flex-col">
+          <h3 class="text-[20px] font-bold">TECHBRAND</h3>
+          <p class="text-[10px]">YOUR TAGLINE GOES HERE</p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-center gap-4 flex-shrink-0">
+        <img
+          src="../assets/banner/5.png"
+          alt="Icon 5"
+          class="w-[62px] h-[58px] rounded-sm"
+        />
+        <div class="flex flex-col">
+          <h3 class="text-[20px] font-bold">TECHBRAND</h3>
+          <p class="text-[10px]">YOUR TAGLINE GOES HERE</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="w-full flex justify-center items-center py-20 bg-gray-50">
+      <div
+        class="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-between gap-14"
+      >
+        <!-- Left Section -->
+        <div class="flex flex-col gap-8 w-full lg:w-1/2">
+          <p
+            class="uppercase text-[#FA1D1D] font-light text-[20px] lg:text-[24px]"
+          >
+            testimonials
+          </p>
+          <h1
+            class="uppercase text-[#011222] text-[36px] lg:text-[58px] font-bold"
+          >
+            review by our clients
+          </h1>
+          <p class="text-[#5B6B7A] leading-relaxed">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+            blanditiis, vitae maiores cumque at consectetur ad libero quo
+            laudantium dolore! Vitae maiores cumque at consectetur ad libero quo
+            laudantium dolore!
+          </p>
+          <img
+            class="hover:cursor-pointer hover:scale-105 transition-transform duration-300 w-[200px] lg:w-[252px] h-[67px]"
+            src="../assets/carlist/Large.png"
+            alt="Call to Action"
+          />
+        </div>
+
+        <!-- Right Section -->
+        <div class="w-full lg:w-1/2 space-y-10">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md hover:bg-[#F2F4F9] transition-colors duration-300 p-6 flex items-start gap-6"
+          >
+            <img
+              src="../assets/review/1.png"
+              alt="Aaron Caldwell"
+              class="w-20 h-20 rounded-full object-cover"
+            />
+            <div>
+              <h3 class="text-lg font-bold text-gray-800">Aaron Caldwell</h3>
+              <p class="text-red-500 text-sm font-semibold">Freelance Writer</p>
+              <p class="text-[#5B6B7A] mt-2 leading-relaxed">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.”
+              </p>
+              <div class="flex items-center mt-3">
+                <div class="text-[#FF9D29] space-x-1 text-lg">
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <span class="text-gray-500 ml-2 text-sm">
+                  <span class="text-[#FF9D29]">5.0</span> / 5.0
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md hover:bg-[#F2F4F9] transition-colors duration-300 p-6 flex items-start gap-6"
+          >
+            <img
+              src="../assets/review/2.png"
+              alt="Amanda Beatrix"
+              class="w-20 h-20 rounded-full object-cover"
+            />
+            <div>
+              <h3 class="text-lg font-bold text-gray-800">Amanda Beatrix</h3>
+              <p class="text-gray-500 text-sm font-semibold">Lawyer</p>
+              <p class="text-[#5B6B7A] mt-2 leading-relaxed">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.”
+              </p>
+              <div class="flex items-center mt-3">
+                <div class="text-[#FF9D29] space-x-1 text-lg">
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <span class="text-gray-500 ml-2 text-sm">
+                  <span class="text-[#FF9D29]">5.0</span> / 5.0
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG AND NEWS -->
+    <section class="w-full flex flex-col justify-center items-center my-40">
+      <div class="w-[80%]">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+          <p class="uppercase text-[#FA1D1D] font-light text-[24px]">
+            blog & news
+          </p>
+          <h1
+            class="uppercase text-[#011222] text-[58px] font-bold max-md:text-[42px]"
+          >
+            our recently post
+          </h1>
+        </div>
+
+        <!-- Blog Cards -->
+        <div class="flex flex-wrap justify-center gap-14 mb-12">
+          <!-- Card 1 -->
+          <div
+            class="bg-white shadow-lg hover:bg-[#F2F4F9] hover:cursor-pointer max-w-[400px]"
+          >
+            <div class="relative">
+              <img
+                src="../assets/blog/1.png"
+                alt="Rent Tips"
+                class="w-full h-[220px] object-cover"
+              />
+              <div
+                class="absolute top-6 left-0 bg-[#FA1D1D] text-white text-sm font-semibold px-4 py-1"
+              >
+                Rent Tips
+              </div>
+            </div>
+            <!-- Card Content -->
+            <div class="p-6">
+              <h2 class="text-gray-800 font-bold text-lg leading-snug">
+                A COMPLETE GUIDE ON HOW NOT TO BE ACCUSED OF STEALING A RENTED
+                CAR
+              </h2>
+              <p class="text-gray-600 mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor.
+              </p>
+              <div
+                class="flex justify-between items-center mt-6 text-gray-500 text-sm"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="../assets/blog/avt.png"
+                    alt="Avatar"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <span>Abigail Barnes</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <span>10 March 2024</span>
+                </div>
+                <a
+                  href="#"
+                  class="text-gray-500 font-semibold hover:text-[#FF9D29]"
+                >
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white shadow-lg hover:bg-[#F2F4F9] hover:cursor-pointer max-w-[400px]"
+          >
+            <div class="relative">
+              <img
+                src="../assets/blog/2.png"
+                alt="News"
+                class="w-full h-[220px] object-cover"
+              />
+              <div
+                class="absolute top-6 left-0 bg-[#020920] text-white text-sm font-semibold px-4 py-1"
+              >
+                News
+              </div>
+            </div>
+            <!-- Card Content -->
+            <div class="p-6">
+              <h2 class="text-gray-800 font-bold text-lg leading-snug">
+                TOP 5 MOST PRESTIGIOUS SELF-DRIVE CAR RENTAL SERVICES IN TOWN
+              </h2>
+              <p class="text-gray-600 mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor.
+              </p>
+              <div
+                class="flex justify-between items-center mt-6 text-gray-500 text-sm"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="../assets/blog/avt.png"
+                    alt="Avatar"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <span>Abigail Barnes</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <span>12 March 2024</span>
+                </div>
+                <a
+                  href="#"
+                  class="text-gray-500 font-semibold hover:text-[#FF9D29]"
+                >
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action Image -->
+        <img
+          src="../assets/blog/Large.png"
+          alt="Large Banner"
+          class="w-[300px] mx-auto"
+        />
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#020920] text-white">
+      <div class="container mx-auto flex flex-col lg:flex-row px-8 py-14">
+        <!-- Footer Column 1 -->
+        <div class="flex flex-col gap-6 w-full lg:w-1/3">
+          <!-- LOGO -->
+          <div class="flex items-center gap-2">
+            <img
+              src="../assets/Logo/Default/wheel-color 2.png"
+              alt="Driveways Logo"
+              class="w-8 h-8"
+            />
+            <h2 class="font-bold text-[28px] text-white">DRIVEWAYS</h2>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            ea voluptatibus, beatae reprehenderit possimus magni sint nam autem
+            inventore explicabo.
+          </p>
+          <!-- SOCIAL MEDIA -->
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-orange-400">FB -</a>
+            <a href="#" class="hover:text-orange-400">IG -</a>
+            <a href="#" class="hover:text-orange-400">LI -</a>
+            <a href="#" class="hover:text-orange-400">YT -</a>
+            <a href="#" class="hover:text-orange-400">TW </a>
+          </div>
+        </div>
+
+        <!-- Footer Column 2 -->
+        <div class="flex flex-col gap-4 w-full lg:w-1/3 mt-8 lg:mt-0">
+          <h3 class="text-orange-400 text-xl mb-2">WORKING HOURS</h3>
+          <p class="text-gray-400 text-sm">Mon-Fri: 9:00 AM - 09:00 PM</p>
+          <p class="text-gray-400 text-sm">Sat: 9:00 AM - 07:00 PM</p>
+          <p class="text-gray-400 text-sm">Sun: Closed</p>
+        </div>
+
+        <!-- Footer Column 3 -->
+        <div class="flex flex-col gap-4 w-full lg:w-1/3 mt-8 lg:mt-0">
+          <h3 class="text-orange-400 text-xl mb-2">QUICK CONTACT</h3>
+          <p class="text-gray-400 text-sm">
+            Office: 42 Marine Parade, Australia
+          </p>
+          <p class="text-gray-400 text-sm">Mail: info@8pxlstudio.com</p>
+          <p class="text-gray-400 text-sm">Phone: +012345666667</p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-700">
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-between items-center px-8 py-4"
+        >
+          <p class="text-gray-400 text-sm">
+            Copyright &copy; 2025 Driveways. All Rights Reserved.
+          </p>
+          <div class="flex gap-6 mt-2 md:mt-0">
+            <a href="#" class="hover:text-orange-400 text-sm">Privacy</a>
+            <a>|</a>
+            <a href="#" class="hover:text-orange-400 text-sm"
+              >Terms of Services</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<script>
+  // Toggle Mobile Menu
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("hidden");
+  });
+</script>
